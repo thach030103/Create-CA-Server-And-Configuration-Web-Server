@@ -47,3 +47,17 @@
   <li>Mở Server Manager -> Add roles and features.</li>
   <li>Chọn Web Server (IIS) -> Next nhiều lần -> Install.</li>
 </ul>
+<h4>Bước 3: Tạo Certificate Request trên IIS</h4>
+<ul>
+<li>Mở IIS Manager, chọn Server Certificates.</li>
+<li>Nhấn Create Certificate Request và điền thông tin:</li>
+<ul>
+<li>Common Name:CNTT-VN</li>
+<li>Organization: CNTTVN</li>
+<li>Organization unit: Thu Duc</li>
+<li>City/locality: HCM</li>
+<li>State/province: HCM</li>
+<li>Country/region: VN</li>
+</ul>
+<li>Lưu file CSR (Certificate Signing Request) thành ca.txt.</li>
+</ul>
