@@ -28,5 +28,10 @@
   <li>Chọn SHA256 làm thuật toán mã hóa ->Next.</li>
   <li>Nhấn Next nhiều lần -> Nhấn Configure để hoàn tất.</li>
 </ul>
-
+<h4>Bước 4: Cấu hình DNS cho máy CA Server</h4>
+<ul>
+  <li>Mở DNS Manager > Nhấn chuột phải vào Forward Lookup Zones > Chọn New Zone.</li>
+  <li>Chọn Primary Zone > Nhập tên zone là cntt.vn.</li>
+  <li>Hoàn tất cấu hình và kiểm tra DNS.</li>
+</ul>
 <h4>2. Configuration Web Server</h4>
