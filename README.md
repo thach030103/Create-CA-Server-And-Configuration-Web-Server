@@ -16,4 +16,17 @@
   <li>Nhập Password cho Directory Services Restore Mode (DSRM).</li>
   <li>Nhấn Next nhiều lần -> Install
 </ul>
+<h4>Bước 3: Cài đặt và cấu hình Active Directory Certificate Services (AD CS)</h4>
+<ul>
+  <li>Mở Server Manager -> Add roles and features.</li>
+  <li>Chọn Active Directory Certificate Services -> Next.</li>
+  <li>Chọn Certification Authority và Certification Authority Web Enrollment -> Next.</li>
+  <li>Nhấn Next nhiều lần -> Install
+  <li>Sau khi cài đặt xong, nhấn Configure Active Directory Certificate Services on the...</li>
+  <li>Chọn Root CA -> Next.</li>
+  <li>Chọn Create a new private key -> Next.</li>
+  <li>Chọn SHA256 làm thuật toán mã hóa ->Next.</li>
+  <li>Nhấn Next nhiều lần -> Nhấn Configure để hoàn tất.</li>
+</ul>
+
 <h4>2. Configuration Web Server</h4>
