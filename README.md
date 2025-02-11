@@ -1,5 +1,5 @@
 ## Create-CA-Server-And-Configuration-Web-Server
-<h4>1. Create Certificate Authorities (CA) Server</h4>
+<h4>1. Create Certificate Authorities (CA) Server trên PC1</h4>
 <h4>Bước 1: Cấu hình IP</h4>
 <p>Đặt IP tĩnh cho CA Server:</p>
 <ul>
@@ -34,4 +34,16 @@
   <li>Chọn Primary Zone > Nhập tên zone là cntt.vn.</li>
   <li>Hoàn tất cấu hình và kiểm tra DNS.</li>
 </ul>
-<h4>2. Configuration Web Server</h4>
+<h4>2. Configuration Web Server trên PC2</h4>
+<h4>Bước 1: Cấu hình IP</h4>
+<p>Đặt IP tĩnh cho Web Server:</p>
+<ul>
+  <li>IP: 192.168.12.200</li>
+  <li>Subnet Mask: 255.255.255.0</li>
+  <li>Default Gateway: 192.168.12.1</li>
+</ul>
+<h4>Bước 2: Cài đặt dịch vụ Web Server (IIS)</h4>
+<ul>
+  <li>Mở Server Manager -> Add roles and features.</li>
+  <li>Chọn Web Server (IIS) -> Next nhiều lần -> Install.</li>
+</ul>
