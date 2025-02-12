@@ -61,3 +61,45 @@
 </ul>
 <li>Lưu file CSR (Certificate Signing Request) thành ca.txt.</li>
 </ul>
+<h4>Bước 4: Ký chứng chỉ với CA Server</h4>
+<ul>
+  <li>Truy cập CA Server qua URL: http://192.168.12.254/certsrv.</li>
+  <li>Chọn Request a certificate -> advanced certificate request.</li>
+  <li>Chọn Submit a certificate request by using a base-64-encoded CMC or PKCS #10 file...</li>
+  <li>Mở file ca.txt, copy nội dung và dán vào Base-64-encoded certificate request -> Submit.</li>
+  <li>Chuyển sang CA Server, vào Pending Requests, nhấn chuột phải vào yêu cầu -> All Tasks -> Issue.</li>
+  <li>Trở lại Web Server, truy cập CA Server qua URL: http://192.168.12.254/certsrv.</li>
+  <li>Chọn View the status of a pending certificate request -> Saved-Request Certificate … -> Download 2 chứng chi đã cấp</li>
+</ul>
+<h4>Bước 5: Import chứng chỉ trên Web Server</h4>
+<ul>
+  <li>Mở Run -> gõ mmc -> Enter.</li>
+  <li>Vào File -> Add/Remove Snap-in .. -> Chọn Certificates -> My user account -> Finish</li>
+  <li>Chuột phải vào Trusted Root Certificate Authorities -> Import.</li>
+  <li>Import file chứng chỉ đã tải về từ CA Server.</li>
+</ul>
+<h4>Bước 6: Hoàn tất cấu hình chứng chỉ trên IIS</h4>
+<ul>
+  <li>Mở lại IIS Manager, nhấn Complete Certificate Request.
+  <li>Chọn file .cer, đặt Friendly name là CNTT-VN.
+  <li>Chuột phải vào Default Web Site -> Edit Bindings.
+  <li>Thêm binding:
+    <ul>
+      <li>Type: https</li>
+      <li>Port: 443</li>
+      <li>Host Name: www.cntt.vn</li>
+      <li>SSL Certificate: CNTT-VN  </li>
+    </ul>
+  <li>Nhấn OK và đóng cửa sổ.</li>
+</ul>
+<h4>Bước 7: Bật SSL cho Website</h4>
+<ul>
+  <li>Chọn Default Web Site -> SSL Settings.</li>
+  <li>Tick chọn Require SSL -> Nhấn Apply.</li>
+</ul>
+<h4>3. Kiểm tra kết quả</h4>
+<ul>
+  <li>Truy cập website: https://www.cntt.vn.</li>
+  <li>Nếu có cảnh báo, nhấn Continue to this website (not recommended).</li>
+  <li>Nhấn vào Certificate error để xem thông tin chứng chỉ.</li>
+</ul>
